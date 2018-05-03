@@ -1,0 +1,16 @@
+export default `
+import { Fetch } from "react-data-fetching";
+
+<Fetch
+  loader={<p>Loading...</p>}
+  url="https://api.github.com/users/octocat"
+  timeout={5000}
+>
+  {({ data }) => (
+    <div>
+      <h1>Username</h1>
+      <p>{data.name}</p>
+    </div>
+  )}
+</Fetch>
+`.trim();
